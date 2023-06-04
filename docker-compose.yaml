@@ -1,0 +1,12 @@
+version: "3.0"
+services:
+  srs:
+    build:
+      context: .
+    volumes:
+      - ./srs:/usr/local/srs
+    ports:
+      - "1935:1935"
+      - "1985:1985"
+      - "8080:8080"
+    command: ./objs/srs -c conf/docker.conf
