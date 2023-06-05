@@ -10,3 +10,4 @@ services:
       - "1985:1985"
       - "8080:8080"
     command: ./objs/srs -c conf/docker.conf
+    #command: sleep 86400 #初回はsleepで起動する
